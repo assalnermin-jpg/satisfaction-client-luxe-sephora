@@ -1,0 +1,11 @@
+﻿kpi,definition,formule,source,granularite,lecture,seuil_alerte
+Volume d'avis,Nombre d'avis publiés,COUNT(*),avis_propres,"Mois, marque, produit",Indicateur d'activité / de demande,Baisse > 20 % vs N-1
+Note moyenne,Moyenne des notes de 1 à 5,AVG(rating),avis_propres.rating,"Mois, marque, produit",Plus haut = mieux,"< 4,0"
+Part d'avis négatifs,Part des avis notés 1 ou 2 étoiles,AVG(rating <= 2),avis_propres.rating,"Mois, marque, produit",Plus bas = mieux (KPI principal),> 15 % ou +5 pts vs historique
+Part d'avis positifs,Part des avis notés 4 ou 5 étoiles,AVG(rating >= 4),avis_propres.rating,"Mois, marque, produit",Plus haut = mieux,< 75 %
+Score net de satisfaction,Part d'avis positifs moins part d'avis négatifs,% positifs - % négatifs,avis_propres.rating,"Mois, marque, produit",Plus haut = mieux,< 60 points
+Taux de recommandation,Part des clientes qui recommandent le produit (avis renseignés),AVG(is_recommended),avis_propres.is_recommended,"Mois, marque, produit",Plus haut = mieux,< 80 %
+Évolution des avis négatifs N vs N-1,Variation en points de la part d'avis négatifs sur un an,pct_neg(N) - pct_neg(N-1),v_kpi_marque_annee,"Marque, année",Négatif = amélioration,> +3 points
+Popularité,Nombre de « loves » (ajouts en favoris),loves_count,produits_propres.loves_count,"Produit, marque",Plus haut = mieux,-
+Prix moyen,Prix moyen des produits (USD),AVG(price_usd),produits_propres.price_usd,"Marque, catégorie, segment",Positionnement,-
+Produits à surveiller,Produits dont la part d'avis négatifs récente dépasse l'historique de 5 points ou plus,pct_neg_recent - pct_neg_historique >= 5,v_produits_a_surveiller,Produit,Alerte,Toute apparition

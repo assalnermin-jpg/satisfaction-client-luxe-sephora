@@ -1,0 +1,12 @@
+﻿controle,nb_lignes,pct,decision
+Avis en double,523,0.05,Supprimés (on garde le premier)
+Date d'avis invalide,0,0.0,Supprimés
+Note hors de l'échelle 1-5,0,0.0,Supprimés
+Avis sur un produit absent du catalogue,0,0.0,"Conservés pour les KPI de satisfaction, exclus des analyses produit"
+Texte d'avis vide,1444,0.13,"Conservés pour les KPI, exclus de l'analyse du texte"
+Recommandation manquante,167817,15.33,Conservés ; taux de recommandation calculé sur les avis renseignés
+Incohérence note / recommandation (1-2★ recommandé ou 5★ non recommandé),2862,0.26,Conservés et signalés (ambiguïté réelle des clientes)
+Marque différente entre avis et catalogue,0,0.0,Marque du catalogue retenue (référentiel)
+Avis publiés lors de mois à moins de 1 000 avis,24062,2.2,Conservés ; analyses temporelles à partir de 2008-09
+Produits sans note ni avis,278,3.27,"Conservés pour l'analyse du catalogue, exclus des KPI de satisfaction"
+Produits au prix > 99e centile (275 $),82,0.97,Conservés (vrais produits de prestige) ; prix analysé en logarithme
